@@ -1,24 +1,46 @@
 import random
 import string
 
-def gerar_senha(tamanho=12):
+def gerar_senha(tamanho):
     if tamanho < 4:
-        return "Tamanho mínimo é 4 caracteres"
+        return "Tamanho mínimo é 4"
 
-    caracteres = string.ascii_letters + string.digits + "!@#$%&*"
+    # garante requisitos básicos
+    maiuscula = random.choice(string.ascii_uppercase)
+    minuscula = random.choice(string.ascii_lowercase)
+    numero = random.choice(string.digits)
+    simbolo = random.choice("!@#$%&*")
 
-    senha = ''.join(random.choice(caracteres) for _ in range(tamanho))
-    return senha
+    resto = string.ascii_letters + string.digits + "!@#$%&*"
+
+    senha = [
+        maiuscula,
+        minuscula,
+        numero,
+        simbolo
+    ]
+
+    for _ in range(tamanho - 4):
+        senha.append(random.choice(resto))
+
+    random.shuffle(senha)
+
+    return "".join(senha)
 
 
-print("=== GERADOR DE SENHAS SPARK 2030 ===")
+while True:
+    print("\n=== GERADOR DE SENHAS SEGURAS ===")
 
-try:
-    tamanho = int(input("Quantos caracteres quer na senha? "))
-    senha_gerada = gerar_senha(tamanho)
+    try:
+        tamanho = int(input("Digite o tamanho da senha (0 para sair): "))
 
-    print(f"\nSua senha segura: {senha_gerada}")
-    print("\nNunca use a mesma senha em vários sites!")
+        if tamanho == 0:
+            print("Saindo...")
+            break
 
-except ValueError:
-    print("Erro: digite apenas números!")
+        senha = gerar_senha(tamanho)
+
+        print(f"\nSenha gerada: {senha}")
+
+    except ValueError:
+        print("Digite apenas números!")
