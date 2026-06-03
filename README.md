@@ -1,4 +1,4 @@
-# Gerador de Senhas Seguras 
+# Gerador de Senhas Python
 
 Projeto em Python que gera senhas seguras e aleatórias com tamanho definido pelo usuário.
 
