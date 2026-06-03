@@ -1,21 +1,20 @@
+# Gerador de Senhas Seguras 
 
- Gerador de Senhas - Spark 2030
+Projeto em Python que gera senhas seguras e aleatórias com tamanho definido pelo usuário.
 
-Script em Python que gera senhas seguras e aleatórias com tamanho definido pelo usuário.
+##  Funcionalidades
+- Geração de senhas aleatórias
+- Tamanho definido pelo usuário
+- Uso de letras, números e símbolos
+- Simples execução via terminal
 
- Stack
-Python | Random | String
+##  Tecnologias
+- Python
+- random
+- string
 
- Como usar
-1. Clone o repo
-2. Rode `python main.py`
-3. Digite o tamanho da senha
-4. Pronto
+##  Como usar
 
- Aprendizados
-- Biblioteca `random` e `string`
-- List comprehension
-- Funções com parâmetros padrão
-- Input do usuário
-
-Meta Hotmart Spark 2030
+Clone o repositório:
+```bash
+git clone <link-do-repo>
