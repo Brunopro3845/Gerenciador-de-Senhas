@@ -1,30 +1,41 @@
-#    Gerador de Senhas Seguras
+# 🔐 Gerenciador de Senhas em Python
 
-Um projeto desenvolvido em Python para gerar senhas fortes e aleatórias de forma rápida e simples pelo terminal.
+Um gerenciador de senhas desenvolvido em Python que permite gerar, armazenar, consultar e remover credenciais de forma simples através do terminal.
 
-##    Sobre o Projeto
+##  Sobre o Projeto
 
-Este programa cria senhas seguras contendo letras maiúsculas, letras minúsculas, números e símbolos especiais. O usuário pode escolher o tamanho da senha, e o sistema garante uma combinação variada de caracteres para aumentar a segurança.
+Este projeto foi criado com o objetivo de praticar conceitos fundamentais de Python, como manipulação de arquivos JSON, funções, estruturas de repetição, tratamento de exceções e organização de código.
 
-##    Funcionalidades
+O sistema permite armazenar informações de login para diferentes serviços, gerando senhas aleatórias automaticamente e salvando os dados localmente.
 
-- Geração de senhas aleatórias
-- Definição personalizada do tamanho da senha
-- Inclusão automática de:
-  - Letras maiúsculas
-  - Letras minúsculas
-  - Números
-  - Símbolos especiais
-- Validação de entrada do usuário
-- Interface simples via terminal
+##  Funcionalidades
 
-##    Tecnologias Utilizadas
+- ✅ Gerar senhas seguras automaticamente
+- ✅ Salvar contas e credenciais
+- ✅ Listar todas as contas cadastradas
+- ✅ Buscar uma conta específica
+- ✅ Remover contas salvas
+- ✅ Armazenamento em arquivo JSON
+- ✅ Criação automática do banco de dados local
+
+## 🛠 Tecnologias Utilizadas
 
 - Python 3
-- Biblioteca `random`
-- Biblioteca `string`
+- JSON
+- os
+- random
+- string
 
-##  Como Executar:
+##  Estrutura do Projeto
+
+```text
+ Gerenciador-de-Senhas
+┣  main.py
+┣  senhas.json
+┗  README.md
+```
+
+##  Como Executar
 
 ### 1. Clone o repositório
 
@@ -32,7 +43,7 @@ Este programa cria senhas seguras contendo letras maiúsculas, letras minúscula
 git clone https://github.com/Brunopro3845/NOME_DO_REPOSITORIO.git
 ```
 
-### 2. Acesse a pasta do projeto
+### 2. Entre na pasta do projeto
 
 ```bash
 cd NOME_DO_REPOSITORIO
@@ -44,44 +55,81 @@ cd NOME_DO_REPOSITORIO
 python main.py
 ```
 
-##    Exemplo de Uso
+##  Exemplo de Uso
 
 ```text
-=== GERADOR DE SENHAS SEGURAS ===
+===================================
+   GERENCIADOR DE SENHAS
+===================================
 
-Digite o tamanho da senha (0 para sair): 12
+1 - Adicionar conta
+2 - Listar contas
+3 - Buscar conta
+4 - Remover conta
+0 - Sair
 
-Senha gerada: A@7mP!2xQ9#k
+Escolha uma opção:
 ```
 
-##    Estrutura do Projeto
+### Exemplo de Conta Salva
 
-```text
- Gerador-de-Senhas
- ┣  main.py
- ┗  README.md
+```json
+{
+    "github": {
+        "usuario": "Bruno3845",
+        "senha": "A@7mP!2xQ9#k"
+    },
+    "steam": {
+        "usuario": "Bruno3845",
+        "senha": "X#8kLp2@Q1"
+    }
+}
 ```
 
-##    Objetivo
+##  Objetivos de Aprendizado
 
-Este projeto foi criado com o objetivo de praticar conceitos fundamentais de Python, incluindo:
+Durante o desenvolvimento deste projeto foram aplicados conceitos como:
 
 - Funções
+- Estruturas condicionais
 - Estruturas de repetição
+- Manipulação de arquivos
+- Leitura e escrita em JSON
 - Tratamento de exceções
-- Manipulação de strings
-- Uso de bibliotecas nativas
+- Organização de código
+- Modularização básica
 
-##    Melhorias Futuras
+##  Limitações Atuais
 
-- Interface gráfica com Tkinter
-- Copiar senha automaticamente para a área de transferência
-- Exportação de senhas para arquivo
-- Uso da biblioteca `secrets` para maior segurança
-- Histórico de senhas geradas
+Este projeto tem fins educacionais e ainda não implementa recursos avançados de segurança.
 
-##    Autor
+Atualmente:
 
-Bruno Miguel
+- As senhas são armazenadas em texto simples.
+- Não existe autenticação por senha mestra.
+- Não há criptografia dos dados.
 
-GitHub: https://github.com/Brunopro3845
+##  Melhorias Futuras
+
+- [ ] Utilizar a biblioteca `secrets` para geração criptograficamente segura
+- [ ] Implementar senha mestra
+- [ ] Criptografar os dados com a biblioteca `cryptography`
+- [ ] Adicionar cópia automática para a área de transferência
+- [ ] Criar interface gráfica com Tkinter
+- [ ] Adicionar edição de contas existentes
+- [ ] Criar sistema de backup automático
+- [ ] Adicionar pesquisa parcial por nome de serviço
+
+##  Status do Projeto
+
+🟢 Em desenvolvimento
+
+##  Autor
+
+**Bruno Miguel**
+
+GitHub: :contentReference[oaicite:0]{index=0}
+
+---
+
+⭐ Se este projeto te ajudou ou serviu de inspiração, considere deixar uma estrela no repositório.
