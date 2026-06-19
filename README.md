@@ -40,13 +40,13 @@ O sistema permite armazenar informações de login para diferentes serviços, ge
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/Brunopro3845/NOME_DO_REPOSITORIO.git
+git clone https://github.com/Brunopro3845/Gerenciador-de-Senhas.git
 ```
 
 ### 2. Entre na pasta do projeto
 
 ```bash
-cd NOME_DO_REPOSITORIO
+cd Gerenciador-de-Senhas
 ```
 
 ### 3. Execute o programa
